@@ -1,9 +1,18 @@
-import React from 'react';
+'use client';
+
+import React, { useState } from 'react';
 import TrainIni from './TrainIni';
+import Train from './Train';
 
 const Intro: React.FC = () => {
+  const [showTrain, setShowTrain] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowTrain(true);
+  };
+
   return (
-    <section className=" w-full h-full flex flex-col overflow-hidden">
+    <section className="w-full h-full flex flex-col overflow-hidden">
       {/* Div 1 - Primera sección */}
       <div className="w-full flex-1 flex flex-col justify-center items-center mt-[10%] md:mt-[5%]">
         {/* Título */}
@@ -26,15 +35,18 @@ const Intro: React.FC = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
         {/* Botón */}
-        <button className="mt-16 md:mt-6 px-16 py-4 rounded-full bg-white text-[#74131f] hover:bg-[#004141] hover:text-white transition-colors shadow-lg hover:shadow-xl transform hover:scale-105">
+        <button
+          onClick={handleButtonClick}
+          className="mt-16 md:mt-6 px-16 py-4 rounded-full bg-white text-[#74131f] hover:bg-[#004141] hover:text-white transition-colors shadow-lg hover:shadow-xl transform hover:scale-105"
+        >
           Entrar
         </button>
       </div>
 
       {/* Div 2 - Segunda sección */}
-      <div className="pl-[2%] w-full flex-1 flex justify-center md:justify-start items-center">
-        <div className="w-[50%] md:w-1/3 lg:w-1/4 mt-[20%] md:-mt-[5%]">
-          <TrainIni />
+      <div className="pl-[3%] w-full flex-1 flex justify-center md:justify-start items-center">
+        <div className="w-[50%] md:w-1/3 lg:w-1/4 mt-[20%] md:-mt-[7%] ">
+          {showTrain ? <Train /> : <TrainIni />}
         </div>
       </div>
     </section>

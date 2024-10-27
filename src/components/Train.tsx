@@ -132,9 +132,9 @@ const Train = () => {
   return (
     <div className="overflow-visible">
       <svg
-        className="w-full h-auto mt-10"
+        className="w-full h-auto"
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1500 1000"
+        viewBox="0 0 1300 1000"
         style={{ overflow: 'visible' }}
       >
 <g>
