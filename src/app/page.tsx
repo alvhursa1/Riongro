@@ -1,12 +1,13 @@
-import FrenteHme from "@/components/FrenteHme";
-import Intro from "@/components/Intro";
+
+import HztalScroll from "@/components/HztalScroll";
+
 
 
 export default function Page() {
   return (
-    <div className="mt-10">
-        <Intro />
-        <FrenteHme  />
+  <div>
+{/*         <Intro /> */}
+        <HztalScroll />
     </div>
   );
 }
