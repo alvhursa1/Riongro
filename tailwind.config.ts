@@ -12,8 +12,14 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        minionRegular: ['MinionPro-Regular', 'sans-serif'],
+        minionItalic: ['MinionPro-Italic', 'sans-serif'],
+        minionRoman: ['MinionPro-Roman', 'sans-serif'],
+      },
     },
   },
   plugins: [],
 };
+
 export default config;

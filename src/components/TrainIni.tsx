@@ -46,95 +46,14 @@ const Train = () => {
         ease: 'none',
       }, 0.5);
     }
-
-    // Animación para las ruedas y llantas del tren
-    const wheelsTimeline = gsap.timeline({ repeat: -1 });
-    // Animar ruedas (rotación continua para simular movimiento)
-    wheelsTimeline.to(['#rueda1', '#rueda2'], {
-      rotation: 360, // Rota completamente
-      transformOrigin: 'center', // Rota alrededor del centro
-      duration: 4, // Duración ajustada para igualar la velocidad de las llantas
-      ease: 'linear',
-      repeat: -1, // Repite indefinidamente
-    });
-
-    // Animar llantas (rotación continua para simular movimiento)
-    wheelsTimeline.to(['#llanta1', '#llanta2', '#llanta3', '#llanta4', '#llanta5', '#llanta6'], {
-      rotation: 360, // Rota completamente
-      transformOrigin: 'center',
-      duration: 2, // Duración de la rotación completa
-      ease: 'linear',
-      repeat: -1, // Repite indefinidamente
-    });
-
-    // Animación para la estrella del árbol de navidad
-    gsap.to('#estrella', {
-      scale: 1.5,
-      rotation: 360,
-      transformOrigin: 'center',
-      duration: 2,
-      ease: 'elastic.inOut',
-      repeat: -1,
-      yoyo: true,
-    });
-
-    // Animación para las bolas rojas (bombr1, bombr2, bombr3, bombr4)
-    gsap.to(['#bombr1', '#bombr2', '#bombr3', '#bombr4'], {
-      x: '+=10',
-      yoyo: true,
-      repeat: -1,
-      duration: 1.5,
-      ease: 'sine.inOut',
-    });
-    gsap.to(['#bombr1', '#bombr2', '#bombr3', '#bombr4'], {
-      opacity: 0.2,
-      repeat: -1,
-      yoyo: true,
-      duration: 0.5,
-      ease: 'power1.inOut',
-    });
-
-    // Animación para las bolas verdes (bombv1, bombv2, bombv3, bombv4)
-    gsap.to(['#bombv1', '#bombv2', '#bombv3', '#bombv4'], {
-      x: '-=10',
-      yoyo: true,
-      repeat: -1,
-      duration: 1.5,
-      ease: 'sine.inOut',
-    });
-    gsap.to(['#bombv1', '#bombv2', '#bombv3', '#bombv4'], {
-      opacity: 0.2,
-      repeat: -1,
-      yoyo: true,
-      duration: 0.5,
-      ease: 'power1.inOut',
-    });
-
-    // Animación para la carrocería del tren (tren1, tren2)
-    gsap.to(['#tren1', '#tren2', '#luza', '#luzb'], {
-      y: '+=25', // Movimiento hacia arriba y abajo
-      repeat: -1,
-      yoyo: true,
-      duration: 2, // Duración del movimiento
-      ease: 'sine.inOut',
-    });
-
-    // Animación para los regalos del último vagón (regalo1, regalo2)
-    gsap.to(['#regalo1', '#regalo2', '#bombv1', '#bombv2', '#bombv3', '#bombv4', '#bombvr1', '#bombr2', '#bombr3', '#bombr4', '#estrella','#arbol' ], {
-      y: '+=10', // Movimiento hacia arriba y abajo acorde al tren
-      repeat: -1,
-      yoyo: true,
-      duration: 2, // Duración del movimiento
-      ease: 'sine.inOut',
-    });
   }, []);
 
   return (
     <div className="overflow-visible">
       <svg
-        className="w-full h-auto mt-10"
+        className="w-full h-auto "
         xmlns="http://www.w3.org/2000/svg"
-        viewBox="0 0 1500 1000"
+        viewBox="0 0 1300 1000"
         style={{ overflow: 'visible' }}
       >
 <g>
