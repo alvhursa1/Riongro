@@ -1,9 +1,11 @@
-import HumoTrain from "@/components/Humotrain";
+import Train from '../components/Train';
+
+
 
 export default function Page() {
   return (
     <div className="mt-10">
-      <HumoTrain />
+      <Train />
     </div>
   );
 }
